@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temporary site</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="photos/favicon.ico" type="image/x-icon" />
+    <style>
+      body {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+        font-size: 19pt;
+        text-align: center;
+      }
+      h1 {
+        color: #800000;
+        font-size: 2em;
+        text-shadow: rgb(214, 115, 91) 1px 0 6px;
+        margin: 0;
+      }
+
+      #desc {
+        width: 100%;
+        color: #a52a2a;
+        margin: 0%;
+        font-size: 0.9em;
+        text-shadow: rgb(214, 115, 91) 1px 0 6px;
+      }
+      #img-me-holding-liquor {
+        min-width: 25%;
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+        max-width: 85%;
+        border: 0.75rem dotted #ca7d46;
+      }
+
+      #img-linkedin {
+        min-width: 5%;
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+        max-width: 220px;
+      }
+
+      #img-coffee {
+        min-width: 7%;
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+        max-width: 70px;
+      }
+
+      #mb {
+        min-width: 7%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1%;
+        height: 6vh;
+        width: 32vh;
+        font-family: "Comic Sans MS", "Comic Sans", cursive;
+        background-color: black;
+        color: #cc46ee;
+        font-size: 1.7rem;
+      }
+    </style>
+  </head>
+  <body style="background-image: url(photos/back.jpg);">
+    <h1>omer meister sample website</h1>
+    <img src="photos/coffee.png" id="img-coffee" />
+    <div id="desc">hello there! just a placeholder for a kubernetes project up to come</div>
+    <br />
+    <a href="https://linkedin.com/in/omer-meister"><img src="photos/linkedin.png" id="img-linkedin" /></a>
+    <br />
+    try the:<br><button id="mb">🎉Magic Button🎉</button>
+    <br />
+    <img src="photos/me-holding-liquor.jpg" id="img-me-holding-liquor" />
+    <div style="font-weight: bold; color: bla">last edited: 07/08/2023</div>
+    <script>
+        function getRandomColor() {
+          // Generate a random RGB color value
+          const r = Math.floor(Math.random() * 256);
+          const g = Math.floor(Math.random() * 256);
+          const b = Math.floor(Math.random() * 256);
+          return `rgb(${r}, ${g}, ${b})`;
+        }
+  
+        document.getElementById("mb").addEventListener("click", function () {
+          // Remove the background image by setting it to an empty string
+          document.body.style.backgroundImage = "";
+  
+          // Get a random color
+          const randomColor = getRandomColor();
+  
+          // Apply the random color to the body background
+          document.body.style.backgroundColor = randomColor;
+        });
+      </script>
+  </body>
+</html>
