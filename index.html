@@ -17,6 +17,7 @@
         font-size: 2em;
         text-shadow: rgb(214, 115, 91) 1px 0 6px;
         margin: 0;
+        
       }
 
       #desc {
@@ -25,12 +26,17 @@
         margin: 0%;
         font-size: 0.9em;
         text-shadow: rgb(214, 115, 91) 1px 0 6px;
+        text-decoration:none;
+        a {
+          color: inherit; /* blue colors for links too */
+          text-decoration:none; /* no underline */
+        }
       }
       #img-me-holding-liquor {
         margin-left: auto;
         margin-right: auto;
         border: 0.75rem dotted #19478b;
-        max-height: 500px
+        max-height: 500px;
       }
 
       #img-linkedin {
@@ -63,36 +69,36 @@
       }
     </style>
   </head>
-  <body style="background-image: url(photos/back.gif);">
+  <body style="background-image: url(photos/back.gif)">
     <h1>omer meister sample website</h1>
     <img src="photos/coffee.png" id="img-coffee" />
-    <div id="desc">hello there! if you are seeing this, my pipeline is working!4!4!4!</div>
+    <div id="desc"><a href="egg.html" id="desc">hello</a> there! if you are seeing this, my pipeline is working</div>
     <br />
     <a href="https://linkedin.com/in/omer-meister"><img src="photos/linkedin.png" id="img-linkedin" /></a>
     <br />
-    try the:<br><button id="mb">🎉Magic Button🎉</button>
+    try the:<br /><button id="mb">🎉Magic Button🎉</button>
     <br />
     <img src="photos/me-holding-liquor.jpg" id="img-me-holding-liquor" />
     <div style="font-weight: bold; color: bla">last edited: 30/09/2023</div>
     <script>
-        function getRandomColor() {
-          // Generate a random RGB color value
-          const r = Math.floor(Math.random() * 256);
-          const g = Math.floor(Math.random() * 256);
-          const b = Math.floor(Math.random() * 256);
-          return `rgb(${r}, ${g}, ${b})`;
-        }
-  
-        document.getElementById("mb").addEventListener("click", function () {
-          // Remove the background image by setting it to an empty string
-          document.body.style.backgroundImage = "";
-  
-          // Get a random color
-          const randomColor = getRandomColor();
-  
-          // Apply the random color to the body background
-          document.body.style.backgroundColor = randomColor;
-        });
-      </script>
+      function getRandomColor() {
+        // Generate a random RGB color value
+        const r = Math.floor(Math.random() * 256);
+        const g = Math.floor(Math.random() * 256);
+        const b = Math.floor(Math.random() * 256);
+        return `rgb(${r}, ${g}, ${b})`;
+      }
+
+      document.getElementById("mb").addEventListener("click", function () {
+        // Remove the background image by setting it to an empty string
+        document.body.style.backgroundImage = "";
+
+        // Get a random color
+        const randomColor = getRandomColor();
+
+        // Apply the random color to the body background
+        document.body.style.backgroundColor = randomColor;
+      });
+    </script>
   </body>
 </html>
